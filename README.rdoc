@@ -1,4 +1,10 @@
-==Jan Pieniążczak - My Books
+==Projekt MirJan
+
+==Autorzy
+
+* Mirosław Podgórski
+* Jan Pieniążczak
+
 
 Rozszerzenie aplikacji My_Books[https://github.com/rails4/my_books] o kilka dodatków łącznie z wdrożeniem jej na Heroku.
 
