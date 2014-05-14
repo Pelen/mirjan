@@ -17,7 +17,10 @@ gem 'jbuilder', '~> 1.2'
 gem 'redcarpet', '3.1.1'
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :production do
