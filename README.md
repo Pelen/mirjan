@@ -1,8 +1,8 @@
-==Projekt MirJan
+##Projekt MirJan
 
 [![Build Status](https://travis-ci.org/Pelen/mirjan.svg?branch=master)](https://travis-ci.org/Pelen/mirjan)
 
-==Autorzy
+##Autorzy
 
 * Mirosław Podgórski
 * Jan Pieniążczak
@@ -13,7 +13,7 @@ Rozszerzenie aplikacji My_Books[https://github.com/rails4/my_books] o kilka doda
 Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, które są umieszczane są na dropboxie.
 
 
-== WYKONANO
+## WYKONANO
 
 * zmiana wyglądu za pomocą bootstrapa przy urzyciu <b>generatora</b> oraz gemu bootstrap_form do tworzenia formularzy
 
@@ -30,7 +30,7 @@ Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, 
 * wdrożenie aplikacji na Heroku
 
 
-== EXTRA GEMS
+## EXTRA GEMS
 
 * gem 'bootstrap_form'
 
@@ -47,7 +47,7 @@ Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, 
 * gem 'bootstrap-will_paginate'
 
 
-== LINK
+## LINK
 
 Link do aplikacji wdrożonej na Heroku http://pelen.herokuapp.com
 
