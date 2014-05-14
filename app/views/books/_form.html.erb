@@ -1,0 +1,28 @@
+<%= simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| %>
+  
+  <div class="control-group string optional">
+    <div class="controls">
+    <% if @book.cover? %>
+      <%= image_tag @book.cover_url(:thumb) %>
+    <% end %>
+    </div>
+  </div>
+
+
+
+
+
+ <%= bootstrap_form_for(@book) do |f| %>
+  <%= f.text_field :author%>
+  <%= f.text_field :title %>
+  <%= f.text_field :isbn %>
+  <%= f.text_field :price %>
+  <%= f.file_field :cover %>
+
+<% end %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn btn-default' %>
+  </div>
+<% end %>
