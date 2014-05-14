@@ -1,5 +1,7 @@
 ==Projekt MirJan
 
+[![Build Status](https://travis-ci.org/Pelen/mirjan.svg?branch=master)](https://travis-ci.org/Pelen/mirjan)
+
 ==Autorzy
 
 * Mirosław Podgórski

@@ -27104,3 +27104,83 @@ Processing by BooksController#index as */*
   Rendered collection (0.1ms)
   Rendered books/index.html.erb within layouts/application (16.7ms)
 Completed 200 OK in 95ms (Views: 91.1ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-14 13:36:13 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (7.5ms)
+  Rendered books/index.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 194ms (Views: 145.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-14 13:36:14 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 0
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (3.8ms)
+  Rendered books/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-05-14 13:36:14 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 4
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (3.4ms)
+  Rendered books/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2014-05-14 13:36:17 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"3"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 8
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (4.5ms)
+  Rendered books/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/?page=4" for 127.0.0.1 at 2014-05-14 13:36:18 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"4"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 12
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (4.6ms)
+  Rendered books/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/?page=5" for 127.0.0.1 at 2014-05-14 13:36:18 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"5"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 16
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (4.2ms)
+  Rendered books/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?page=6" for 127.0.0.1 at 2014-05-14 13:36:18 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"6"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 20
+  Rendered books/_book.html.erb (1.1ms)
+  Rendered books/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?page=7" for 127.0.0.1 at 2014-05-14 13:36:19 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"7"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 24[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered collection (0.3ms)
+  Rendered books/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.3ms)
