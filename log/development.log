@@ -28680,3 +28680,1605 @@ ActionController::RoutingError (No route matches [GET] "/users/jochan13"):
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.9ms)
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
   Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (31.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-15 15:06:43 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.9ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (24.7ms)
+  Rendered books/index.html.erb within layouts/application (125.2ms)
+Completed 200 OK in 803ms (Views: 602.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-05-15 15:06:46 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 4
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (14.2ms)
+  Rendered books/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 138ms (Views: 133.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-05-15 15:06:48 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered books/_form.html.erb (191.7ms)
+  Rendered books/_form.html.erb (20.8ms)
+  Rendered books/edit.html.erb within layouts/application (227.6ms)
+Completed 200 OK in 371ms (Views: 362.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/books/1/edit" for 127.0.0.1 at 2014-05-15 15:13:02 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (1.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered books/_form.html.erb (26.9ms)
+  Rendered books/_form.html.erb (23.2ms)
+  Rendered books/edit.html.erb within layouts/application (65.1ms)
+Completed 200 OK in 225ms (Views: 215.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-15 15:13:09 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (2.2ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 0
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (24.7ms)
+  Rendered books/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 199ms (Views: 193.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/?page=2" for 127.0.0.1 at 2014-05-15 15:13:10 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[35mBook Load (1.2ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 4
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (32.3ms)
+  Rendered books/index.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 212ms (Views: 207.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/?page=3" for 127.0.0.1 at 2014-05-15 15:13:10 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"3"}
+  [1m[35mBook Load (0.7ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 8
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (17.0ms)
+  Rendered books/index.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 197ms (Views: 187.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:13:11 +0200
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (26.9ms)
+  Rendered books/new.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 185ms (Views: 182.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-05-15 15:13:30 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.6ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 0
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (25.6ms)
+  Rendered books/index.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 207ms (Views: 202.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/books?page=4" for 127.0.0.1 at 2014-05-15 15:13:31 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"4"}
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 12
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered books/_book.html.erb (17.2ms)
+  Rendered books/index.html.erb within layouts/application (37.4ms)
+Completed 200 OK in 155ms (Views: 149.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:13:34 +0200
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (24.4ms)
+  Rendered books/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 152ms (Views: 149.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:15:20 +0200
+Processing by BooksController#new as HTML
+ERROR: compiling _app_views_books__form_html_erb___660033350136505497_33460480 RAISED /home/jochan/mirjan/app/views/books/_form.html.erb:24: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^
+Function body:           def _app_views_books__form_html_erb___660033350136505497_33460480(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "books/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| @output_buffer.safe_append='
+  
+  <div class="control-group string optional">
+    <div class="controls">
+';     if @book.cover? 
+@output_buffer.safe_append='      ';@output_buffer.append=( image_tag @book.cover_url(:thumb) );@output_buffer.safe_append='
+';     end 
+@output_buffer.safe_append='    </div>
+  </div>
+
+
+
+
+
+ ';@output_buffer.append=  bootstrap_form_for(@book) do |f| @output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :author);@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :title );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :isbn );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :price );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.file_field :cover );@output_buffer.safe_append='
+
+
+  <div class="form-actions">
+    ';@output_buffer.append=( f.button :submit, , :class => 'btn-primary' );@output_buffer.safe_append='
+    ';@output_buffer.append=( link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn btn-default' );@output_buffer.safe_append='
+  </div>
+';   end 
+ end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:21:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:24:in `render'
+/home/jochan/mirjan/app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:413:in `_run__985089507656930773__process_action__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3226380155875212960__call__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/server.rb:264:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands/server.rb:84:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:76:in `block in <top (required)>'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `tap'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+  Rendered books/_form.html.erb (43.7ms)
+  Rendered books/new.html.erb within layouts/application (55.8ms)
+Completed 500 Internal Server Error in 63ms
+
+ActionView::Template::Error (/home/jochan/mirjan/app/views/books/_form.html.erb:24: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^):
+    21: 
+    22: 
+    23:   <div class="form-actions">
+    24:     <%= f.button :submit, , :class => 'btn-primary' %>
+    25:     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+    26:                 books_path, :class => 'btn btn-default' %>
+    27:   </div>
+  app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.4ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:15:47 +0200
+Processing by BooksController#new as HTML
+ERROR: compiling _app_views_books__form_html_erb___660033350136505497_29544020 RAISED /home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^
+/home/jochan/mirjan/app/views/books/_form.html.erb:24: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^
+Function body:           def _app_views_books__form_html_erb___660033350136505497_29544020(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "books/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| @output_buffer.safe_append='
+  
+  <div class="control-group string optional">
+    <div class="controls">
+';     if @book.cover? 
+@output_buffer.safe_append='      ';@output_buffer.append=( image_tag @book.cover_url(:thumb) );@output_buffer.safe_append='
+';     end 
+@output_buffer.safe_append='    </div>
+  </div>
+
+
+
+
+
+ ';@output_buffer.append=  bootstrap_form_for(@book) do |f| @output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :author);@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :title );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :isbn );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :price );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.file_field :cover );@output_buffer.safe_append='
+ ';@output_buffer.append=( f.button :submit, , :class => 'btn-primary' );@output_buffer.safe_append='
+'; end 
+@output_buffer.safe_append='  <div class="form-actions">
+    ';@output_buffer.append=( f.button :submit, , :class => 'btn-primary' );@output_buffer.safe_append='
+    ';@output_buffer.append=( link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn btn-default' );@output_buffer.safe_append='
+  </div>
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:21:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:24:in `render'
+/home/jochan/mirjan/app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:413:in `_run__985089507656930773__process_action__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3226380155875212960__call__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/server.rb:264:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands/server.rb:84:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:76:in `block in <top (required)>'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `tap'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+  Rendered books/_form.html.erb (19.8ms)
+  Rendered books/new.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (/home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^
+/home/jochan/mirjan/app/views/books/_form.html.erb:24: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^):
+    18:   <%= f.text_field :isbn %>
+    19:   <%= f.text_field :price %>
+    20:   <%= f.file_field :cover %>
+    21:  <%= f.button :submit, , :class => 'btn-primary' %>
+    22: <% end %>
+    23:   <div class="form-actions">
+    24:     <%= f.button :submit, , :class => 'btn-primary' %>
+  app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (112.3ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:15:49 +0200
+Processing by BooksController#new as HTML
+ERROR: compiling _app_views_books__form_html_erb___660033350136505497_29544020 RAISED /home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^
+/home/jochan/mirjan/app/views/books/_form.html.erb:24: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^
+Function body:           def _app_views_books__form_html_erb___660033350136505497_29544020(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "books/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| @output_buffer.safe_append='
+  
+  <div class="control-group string optional">
+    <div class="controls">
+';     if @book.cover? 
+@output_buffer.safe_append='      ';@output_buffer.append=( image_tag @book.cover_url(:thumb) );@output_buffer.safe_append='
+';     end 
+@output_buffer.safe_append='    </div>
+  </div>
+
+
+
+
+
+ ';@output_buffer.append=  bootstrap_form_for(@book) do |f| @output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :author);@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :title );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :isbn );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :price );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.file_field :cover );@output_buffer.safe_append='
+ ';@output_buffer.append=( f.button :submit, , :class => 'btn-primary' );@output_buffer.safe_append='
+'; end 
+@output_buffer.safe_append='  <div class="form-actions">
+    ';@output_buffer.append=( f.button :submit, , :class => 'btn-primary' );@output_buffer.safe_append='
+    ';@output_buffer.append=( link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn btn-default' );@output_buffer.safe_append='
+  </div>
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:21:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:24:in `render'
+/home/jochan/mirjan/app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:413:in `_run__985089507656930773__process_action__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3226380155875212960__call__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/server.rb:264:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands/server.rb:84:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:76:in `block in <top (required)>'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `tap'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+  Rendered books/_form.html.erb (36.7ms)
+  Rendered books/new.html.erb within layouts/application (41.3ms)
+Completed 500 Internal Server Error in 63ms
+
+ActionView::Template::Error (/home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^
+/home/jochan/mirjan/app/views/books/_form.html.erb:24: syntax error, unexpected ','
+...er.append=( f.button :submit, , :class => 'btn-primary' );@o...
+...                               ^):
+    18:   <%= f.text_field :isbn %>
+    19:   <%= f.text_field :price %>
+    20:   <%= f.file_field :cover %>
+    21:  <%= f.button :submit, , :class => 'btn-primary' %>
+    22: <% end %>
+    23:   <div class="form-actions">
+    24:     <%= f.button :submit, , :class => 'btn-primary' %>
+  app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.1ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (96.9ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:17:57 +0200
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (36.9ms)
+  Rendered books/new.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 227ms (Views: 224.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-05-15 15:18:02 +0200
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eqDNXGrC8iHh5dMBXVpc1g3C5WE3xD09ZSDJJFqqyqQ=", "book"=>{"author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mBook Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered books/_form.html.erb (21.9ms)
+  Rendered books/new.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 225ms (Views: 163.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/books?page=2" for 127.0.0.1 at 2014-05-15 15:18:09 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[36mBook Load (1.4ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 4[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered books/_book.html.erb (24.1ms)
+  Rendered books/index.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 177ms (Views: 171.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/books?page=3" for 127.0.0.1 at 2014-05-15 15:18:09 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"3"}
+  [1m[36mBook Load (0.9ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 8[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered books/_book.html.erb (33.2ms)
+  Rendered books/index.html.erb within layouts/application (67.7ms)
+Completed 200 OK in 263ms (Views: 258.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books?page=4" for 127.0.0.1 at 2014-05-15 15:18:09 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"4"}
+  [1m[36mBook Load (1.6ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 12[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered books/_book.html.erb (18.6ms)
+  Rendered books/index.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 214ms (Views: 206.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/books?page=5" for 127.0.0.1 at 2014-05-15 15:18:09 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"5"}
+  [1m[36mBook Load (0.8ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 16[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered books/_book.html.erb (29.0ms)
+  Rendered books/index.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 305ms (Views: 300.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books?page=6" for 127.0.0.1 at 2014-05-15 15:18:10 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"6"}
+  [1m[36mBook Load (1.3ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 20[0m
+  Rendered books/_book.html.erb (4.4ms)
+  Rendered books/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 172ms (Views: 167.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/books?page=7" for 127.0.0.1 at 2014-05-15 15:18:10 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"7"}
+  [1m[35mBook Load (3.5ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 24
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered collection (0.1ms)
+  Rendered books/index.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 195ms (Views: 187.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/books?page=8" for 127.0.0.1 at 2014-05-15 15:18:10 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"8"}
+  [1m[35mBook Load (0.8ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 28
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  Rendered collection (0.1ms)
+  Rendered books/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 189ms (Views: 181.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-05-15 15:18:48 +0200
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eqDNXGrC8iHh5dMBXVpc1g3C5WE3xD09ZSDJJFqqyqQ=", "book"=>{"author"=>"", "title"=>"", "isbn"=>"", "price"=>""}, "commit"=>"Create Book"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mBook Exists (7.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = '' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+ERROR: compiling _app_views_books__form_html_erb___660033350136505497_32795520 RAISED /home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected =>, expecting :: or '[' or '.'
+...er.append=( f.submit, :class => 'btn-primary' );@output_buff...
+...                               ^
+Function body:           def _app_views_books__form_html_erb___660033350136505497_32795520(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "books/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| @output_buffer.safe_append='
+  
+  <div class="control-group string optional">
+    <div class="controls">
+';     if @book.cover? 
+@output_buffer.safe_append='      ';@output_buffer.append=( image_tag @book.cover_url(:thumb) );@output_buffer.safe_append='
+';     end 
+@output_buffer.safe_append='    </div>
+  </div>
+
+
+
+
+
+ ';@output_buffer.append=  bootstrap_form_for(@book) do |f| @output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :author);@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :title );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :isbn );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :price );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.file_field :cover );@output_buffer.safe_append='
+';@output_buffer.append=( f.submit, :class => 'btn-primary' );@output_buffer.safe_append='
+'; end 
+@output_buffer.safe_append='  <div class="form-actions">
+
+    ';@output_buffer.append=( link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn btn-default' );@output_buffer.safe_append='
+  </div>
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:21:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:24:in `render'
+/home/jochan/mirjan/app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/jochan/mirjan/app/controllers/books_controller.rb:70:in `block (2 levels) in create'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/mime_responds.rb:191:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/mime_responds.rb:191:in `respond_to'
+/home/jochan/mirjan/app/controllers/books_controller.rb:65:in `create'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:413:in `_run__985089507656930773__process_action__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:35:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3226380155875212960__call__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/server.rb:264:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands/server.rb:84:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:76:in `block in <top (required)>'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `tap'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+  Rendered books/_form.html.erb (26.4ms)
+  Rendered books/new.html.erb within layouts/application (37.9ms)
+Completed 500 Internal Server Error in 75ms
+
+ActionView::Template::Error (/home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected =>, expecting :: or '[' or '.'
+...er.append=( f.submit, :class => 'btn-primary' );@output_buff...
+...                               ^):
+    18:   <%= f.text_field :isbn %>
+    19:   <%= f.text_field :price %>
+    20:   <%= f.file_field :cover %>
+    21: <%= f.submit, :class => 'btn-primary' %>
+    22: <% end %>
+    23:   <div class="form-actions">
+    24: 
+  app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+  app/controllers/books_controller.rb:70:in `block (2 levels) in create'
+  app/controllers/books_controller.rb:65:in `create'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (12.2ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (67.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-05-15 15:19:03 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.8ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered books/_book.html.erb (22.7ms)
+  Rendered books/index.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 201ms (Views: 195.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/books?page=2" for 127.0.0.1 at 2014-05-15 15:19:05 +0200
+Processing by BooksController#index as */*
+  Parameters: {"page"=>"2"}
+  [1m[36mBook Load (0.7ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 4[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "books"
+  Rendered books/_book.html.erb (18.2ms)
+  Rendered books/index.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 163ms (Views: 157.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:19:08 +0200
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (37.7ms)
+  Rendered books/new.html.erb within layouts/application (51.2ms)
+Completed 200 OK in 267ms (Views: 262.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:20:57 +0200
+Processing by BooksController#new as HTML
+ERROR: compiling _app_views_books__form_html_erb___660033350136505497_32658720 RAISED /home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, class: 'btn-primary' );@output_buff...
+...                               ^
+Function body:           def _app_views_books__form_html_erb___660033350136505497_32658720(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "books/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| @output_buffer.safe_append='
+  
+  <div class="control-group string optional">
+    <div class="controls">
+';     if @book.cover? 
+@output_buffer.safe_append='      ';@output_buffer.append=( image_tag @book.cover_url(:thumb) );@output_buffer.safe_append='
+';     end 
+@output_buffer.safe_append='    </div>
+  </div>
+
+
+
+
+
+ ';@output_buffer.append=  bootstrap_form_for(@book) do |f| @output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :author);@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :title );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :isbn );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :price );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.file_field :cover );@output_buffer.safe_append='
+';@output_buffer.append=( f.submit, class: 'btn-primary' );@output_buffer.safe_append='
+'; end 
+@output_buffer.safe_append='  <div class="form-actions">
+
+    ';@output_buffer.append=( link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn btn-default' );@output_buffer.safe_append='
+  </div>
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:21:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:24:in `render'
+/home/jochan/mirjan/app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:413:in `_run__985089507656930773__process_action__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3226380155875212960__call__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/server.rb:264:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands/server.rb:84:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:76:in `block in <top (required)>'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `tap'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+  Rendered books/_form.html.erb (48.1ms)
+  Rendered books/new.html.erb within layouts/application (58.1ms)
+Completed 500 Internal Server Error in 69ms
+
+ActionView::Template::Error (/home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, class: 'btn-primary' );@output_buff...
+...                               ^):
+    18:   <%= f.text_field :isbn %>
+    19:   <%= f.text_field :price %>
+    20:   <%= f.file_field :cover %>
+    21: <%= f.submit, class: 'btn-primary' %>
+    22: <% end %>
+    23:   <div class="form-actions">
+    24: 
+  app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.5ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (85.8ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:21:24 +0200
+Processing by BooksController#new as HTML
+ERROR: compiling _app_views_books__form_html_erb___660033350136505497_18365020 RAISED /home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, class: 'btn btn-primary' );@output_...
+...                               ^
+Function body:           def _app_views_books__form_html_erb___660033350136505497_18365020(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "books/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| @output_buffer.safe_append='
+  
+  <div class="control-group string optional">
+    <div class="controls">
+';     if @book.cover? 
+@output_buffer.safe_append='      ';@output_buffer.append=( image_tag @book.cover_url(:thumb) );@output_buffer.safe_append='
+';     end 
+@output_buffer.safe_append='    </div>
+  </div>
+
+
+
+
+
+ ';@output_buffer.append=  bootstrap_form_for(@book) do |f| @output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :author);@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :title );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :isbn );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :price );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.file_field :cover );@output_buffer.safe_append='
+';@output_buffer.append=( f.submit, class: 'btn btn-primary' );@output_buffer.safe_append='
+'; end 
+@output_buffer.safe_append='  <div class="form-actions">
+
+    ';@output_buffer.append=( link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn btn-default' );@output_buffer.safe_append='
+  </div>
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:21:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:24:in `render'
+/home/jochan/mirjan/app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:413:in `_run__985089507656930773__process_action__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3226380155875212960__call__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/server.rb:264:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands/server.rb:84:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:76:in `block in <top (required)>'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `tap'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+  Rendered books/_form.html.erb (27.9ms)
+  Rendered books/new.html.erb within layouts/application (39.4ms)
+Completed 500 Internal Server Error in 56ms
+
+ActionView::Template::Error (/home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, class: 'btn btn-primary' );@output_...
+...                               ^):
+    18:   <%= f.text_field :isbn %>
+    19:   <%= f.text_field :price %>
+    20:   <%= f.file_field :cover %>
+    21: <%= f.submit, class: 'btn btn-primary' %>
+    22: <% end %>
+    23:   <div class="form-actions">
+    24: 
+  app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.7ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.6ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-05-15 15:21:38 +0200
+Processing by BooksController#new as HTML
+ERROR: compiling _app_views_books__form_html_erb___660033350136505497_45570500 RAISED /home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, class: "btn btn-primary" );@output_...
+...                               ^
+Function body:           def _app_views_books__form_html_erb___660033350136505497_45570500(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "books/_form";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| @output_buffer.safe_append='
+  
+  <div class="control-group string optional">
+    <div class="controls">
+';     if @book.cover? 
+@output_buffer.safe_append='      ';@output_buffer.append=( image_tag @book.cover_url(:thumb) );@output_buffer.safe_append='
+';     end 
+@output_buffer.safe_append='    </div>
+  </div>
+
+
+
+
+
+ ';@output_buffer.append=  bootstrap_form_for(@book) do |f| @output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :author);@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :title );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :isbn );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.text_field :price );@output_buffer.safe_append='
+  ';@output_buffer.append=( f.file_field :cover );@output_buffer.safe_append='
+';@output_buffer.append=( f.submit, class: "btn btn-primary" );@output_buffer.safe_append='
+'; end 
+@output_buffer.safe_append='  <div class="form-actions">
+
+    ';@output_buffer.append=( link_to t('.cancel', :default => t("helpers.links.cancel")),
+                books_path, :class => 'btn btn-default' );@output_buffer.safe_append='
+  </div>
+'; end 
+@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `module_eval'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:299:in `compile'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:248:in `block in compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `synchronize'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:236:in `compile!'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:142:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:21:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/helpers/rendering_helper.rb:24:in `render'
+/home/jochan/mirjan/app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:143:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:161:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/template.rb:141:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:97:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/jochan/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:189:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:413:in `_run__985089507656930773__process_action__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/notifications.rb:159:in `instrument'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/base.rb:136:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/abstract_controller/rendering.rb:44:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:195:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_controller/metal.rb:231:in `block in action'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/query_cache.rb:36:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activerecord-4.0.3/lib/active_record/migration.rb:369:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:373:in `_run__3226380155875212960__call__callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:38:in `call_app'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `block in call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/rack/logger.rb:20:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/quiet_assets-1.0.2/lib/quiet_assets.rb:18:in `call_with_quiet_assets'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/activesupport-4.0.3/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/engine.rb:511:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/application.rb:97:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:86:in `block in pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `catch'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:84:in `pre_process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:53:in `process'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/connection.rb:39:in `receive_data'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run_machine'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/eventmachine-1.0.3/lib/eventmachine.rb:187:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/backends/base.rb:73:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/thin-1.6.2/lib/thin/server.rb:162:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/handler/thin.rb:16:in `run'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/rack-1.5.2/lib/rack/server.rb:264:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands/server.rb:84:in `start'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:76:in `block in <top (required)>'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `tap'
+/home/jochan/.rvm/gems/ruby-2.1.1/gems/railties-4.0.3/lib/rails/commands.rb:71:in `<top (required)>'
+bin/rails:4:in `require'
+bin/rails:4:in `<main>'
+  Rendered books/_form.html.erb (43.5ms)
+  Rendered books/new.html.erb within layouts/application (50.5ms)
+Completed 500 Internal Server Error in 75ms
+
+ActionView::Template::Error (/home/jochan/mirjan/app/views/books/_form.html.erb:21: syntax error, unexpected tLABEL, expecting '='
+...uffer.append=( f.submit, class: "btn btn-primary" );@output_...
+...                               ^):
+    18:   <%= f.text_field :isbn %>
+    19:   <%= f.text_field :price %>
+    20:   <%= f.file_field :cover %>
+    21: <%= f.submit, class: "btn btn-primary" %>
+    22: <% end %>
+    23:   <div class="form-actions">
+    24: 
+  app/views/books/new.html.erb:5:in `_app_views_books_new_html_erb___1873823142928019400_33594780'
+
+
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (7.6ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+  Rendered /home/jochan/.rvm/gems/ruby-2.1.1/gems/actionpack-4.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (60.5ms)
