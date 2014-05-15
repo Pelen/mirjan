@@ -4273,3 +4273,808 @@ Completed 200 OK in 52ms (Views: 30.3ms | ActiveRecord: 0.2ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  Rendered books/_form.html.erb (107.1ms)
+  Rendered books/new.html.erb (166.4ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/books" for 127.0.0.1 at 2014-05-15 09:05:00 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 0[0m
+  Rendered collection (0.0ms)
+Completed 200 OK in 7650ms (Views: 7610.5ms | ActiveRecord: 0.5ms)
+  [1m[35m (3.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (23.3ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:07 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "books"
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.4ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books
+Completed 302 Found in 15ms (ActiveRecord: 2.3ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.5ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (1.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.3ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 14ms (ActiveRecord: 2.6ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}}
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}}
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.4ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  [1m[36mBook Load (0.6ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}, "id"=>"1"}
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (1.3ms)[0m  SELECT 1 AS one FROM "books" WHERE ("books"."title" = 'MyTitle' AND "books"."id" != 1) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 15ms (ActiveRecord: 2.2ms)
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString"}, "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (2.1ms)[0m  begin transaction
+  [1m[36m (1.8ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.4ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}, "id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.8ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE ("books"."title" = 'MyTitle' AND "books"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.5ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:05:08 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:05:08 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}, "id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  Rendered books/_form.html.erb (22.2ms)
+  Rendered books/_form.html.erb (11.6ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  Rendered books/_form.html.erb (110.5ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  Rendered books/_form.html.erb (10.7ms)
+  Rendered books/_form.html.erb (49.6ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (5.3ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (11.2ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:48 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:48 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (1.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 22ms (Views: 12.4ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:48 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:48 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (24.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.1ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:48 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:48 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.5ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:48 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:48 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (1.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.3ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:48 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:48 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+Completed 200 OK in 64ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:48 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:48 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (49.7ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:48 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:48 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 56ms (ActiveRecord: 50.4ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.3ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (14.3ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:48 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:48 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 25ms (ActiveRecord: 15.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}}
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}}
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.4ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (7.0ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:49 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:49 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}, "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE ("books"."title" = 'MyTitle' AND "books"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:49 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:49 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (2.1ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:49 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:49 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}, "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE ("books"."title" = 'MyTitle' AND "books"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:49 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:49 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}, "id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (1.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 1.6ms)
+  [1m[36m (1.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.3ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (42.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:41:49 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:41:49 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/books" for 127.0.0.1 at 2014-05-15 09:41:49 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 0
+  Rendered collection (0.0ms)
+Completed 200 OK in 226ms (Views: 192.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  Rendered books/show.html.erb (35.5ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (14.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  Rendered books/_form.html.erb (84.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/books" for 127.0.0.1 at 2014-05-15 09:42:14 +0200
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.4ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 0[0m
+  Rendered collection (0.0ms)
+Completed 200 OK in 157ms (Views: 99.1ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  Rendered books/_form.html.erb (112.0ms)
+  Rendered books/_form.html.erb (9.3ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (12.1ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.4ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.3ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}, "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE ("books"."title" = 'MyTitle' AND "books"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[35m (0.3ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}, "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE ("books"."title" = 'MyTitle' AND "books"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "books"
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}}
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}}
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 9ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "books"
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:42:14 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:42:14 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#index as HTML
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 0
+  [1m[36m (2.7ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (7.7ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:06 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:06 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#index as HTML
+  Rendered books/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" LIMIT 4 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}}
+Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}}
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "books"
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.0ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 8ms (ActiveRecord: 1.2ms)
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" ORDER BY "books"."id" DESC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.4ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.6ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (29.5ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}, "id"=>"1"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (4.6ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"invalid value"}, "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.5ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}, "id"=>"1"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE ("books"."title" = 'MyTitle' AND "books"."id" != 1) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books/1
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.2ms)[0m  SELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString"}, "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"author"=>"MyString", "title"=>"MyTitle"}, "id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mBook Exists (0.3ms)[0m  SELECT 1 AS one FROM "books" WHERE ("books"."title" = 'MyTitle' AND "books"."id" != 1) LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books/1
+Completed 302 Found in 11ms (ActiveRecord: 0.9ms)
+  [1m[35m (51.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by BooksController#new as HTML
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/books
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mBook Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "books" WHERE "books"."title" = 'MyTitle' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "books" ("author", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)  [["author", "MyString"], ["created_at", Thu, 15 May 2014 07:46:07 UTC +00:00], ["title", "MyTitle"], ["updated_at", Thu, 15 May 2014 07:46:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "books"
+Processing by BooksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/books
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "books"[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/books" for 127.0.0.1 at 2014-05-15 09:46:07 +0200
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (1.0ms)[0m  SELECT "books".* FROM "books" LIMIT 4 OFFSET 0
+  Rendered collection (0.1ms)
+Completed 200 OK in 310ms (Views: 269.9ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  Rendered books/_form.html.erb (100.6ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  Rendered books/_form.html.erb (21.5ms)
+  Rendered books/_form.html.erb (11.4ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
