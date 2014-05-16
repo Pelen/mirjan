@@ -5,14 +5,8 @@ mirjan:
     - mirjan.shellyapp.com
   servers:
     app1:
-      size: large
-      thin: 4
-      # delayed_job: 1
-      # sidekiq: 1
-      # clockwork: on
-      # whenever: on
-      # elasticsearch: on
+      size: small
+      thin: 2
       databases:
         - postgresql
-        # - mongodb
-        # - redis
+      
