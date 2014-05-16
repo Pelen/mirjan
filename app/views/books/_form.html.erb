@@ -1,28 +1,45 @@
-<%= simple_form_for @book, :html => { :class => 'form-horizontal' } do |f| %>
-  
-  <div class="control-group string optional">
-    <div class="controls">
-    <% if @book.cover? %>
-      <%= image_tag @book.cover_url(:thumb) %>
-    <% end %>
-    </div>
-  </div>
-
-
-
-
-
- <%= bootstrap_form_for(@book) do |f| %>
-  <%= f.text_field :author%>
-  <%= f.text_field :title %>
-  <%= f.text_field :isbn %>
-  <%= f.text_field :price %>
-  <%= f.file_field :cover %>
-<%= f.submit %>
-<% end %>
-  <div class="form-actions">
-
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                books_path, :class => 'btn btn-default' %>
-  </div>
+<%= simple_form_for(@book) do |f| %>
+  <%= f.error_notification %>
+  <table class="table table-bordered">
+    <thead>
+     <tr>
+       <th width="20%">Cover</th>
+       <th>Edit</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>     
+       <td width="20%">
+         <div class="control-group string optional">
+          <div class="controls">
+           <% if @book.cover? %>
+           <%= image_tag @book.cover_url(:thumb) %>
+           <% end %>
+          </div>
+         </div>
+         <div class="form-inputs">
+           <%= f.input :cover, label: "Upload local file", as: :file %>
+           <%= f.hidden_field :cover_cache %>
+           <%= f.input :remote_cover_url, label: "or input URL" %>
+           <% unless @book.new_record? %>
+           <%= f.input :remove_cover, label: "Delete cover", as: :boolean %>
+           <% end %>
+         </div>
+       </td>
+       <td>
+        <div class="form-inputs">
+        <%= f.input :author %><br>
+        <%= f.input :title %><br>
+        <%= f.input :isbn %><br>
+        <%= f.input :price %><br>
+        </div>
+       </td>
+     </tr>
+    </tbody>
+</table>
+      
+<div class="form-actions">
+ <%= f.button :submit %>
+ <%= link_to 'Back', books_path, class: "btn btn-default" %>
+</div>
 <% end %>

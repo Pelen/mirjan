@@ -35,15 +35,15 @@ gem 'bootstrap-sass', '3.1.1.0'
 gem 'bootstrap-generators', '~> 3.1.1'
 gem 'devise'
 gem 'rmagick', '~> 2.13.2'
-
-gem 'carrierwave-dropbox'
+gem 'carrierwave'
+#gem 'carrierwave-dropbox'
 gem 'turbolinks'
 
-gem 'dropbox-sdk'
+#gem 'dropbox-sdk'
 
 gem 'thin'
-
-gem 'fog'
+gem 'cloudinary'
+#gem 'fog'
 gem 'execjs'
 gem 'simple_form', '~> 3.0.1'
 gem 'quiet_assets', '~> 1.0.2'

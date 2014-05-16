@@ -2,20 +2,26 @@
 
 class CoverUploader < CarrierWave::Uploader::Base
 
+  include Cloudinary::CarrierWave
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
-include Sprockets::Rails::Helper
+
+  process :resize_to_fit => [400, 400]
+
+  version :thumb do
+    process :resize_to_fit => [200, 400]
+  end
 
   # Choose what kind of storage to use for this uploader:
   #storage :file
   # storage :fog
-storage :dropbox
+
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
-  def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
+  # def store_dir
+  #   "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+  # end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
@@ -31,31 +37,16 @@ storage :dropbox
   # def scale(width, height)
   #   # do something
   # end
-process :resize_to_fit => [400, 400]
+
   # Create different versions of your uploaded files:
-    version :thumb do
-    # process :crop
-    process :resize_to_fit => [200, 400]
-  end
-
-
-  def crop
-    if model.crop_x.present?
-      manipulate! do |img|
-        x = model.crop_x.to_i
-        y = model.crop_y.to_i
-        w = model.crop_w.to_i
-        h = model.crop_h.to_i
-        img.crop!(x, y, w, h)
-      end
-    end
-  end
-
+  # version :thumb do
+  #   process :resize_to_fit => [50, 50]
+  # end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list
-     %w(jpg jpeg gif png)
+    %w(jpg jpeg gif png)
   end
 
   # Override the filename of the uploaded files:
