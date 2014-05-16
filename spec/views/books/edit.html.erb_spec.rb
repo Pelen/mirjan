@@ -10,10 +10,22 @@ describe "books/edit" do
     ))
   end
 
-  it "display back link" do
+
+    it "display confirm button" do
+    render
+    rendered.should have_selector('input[type=submit]')
+  end
+
+    it "display back link" do
     render
     rendered.should have_link('Back', href: books_path)
   end
+
+    it "renders _form partial" do
+    render
+    expect(view).to render_template(:partial => "_form", :count => 2)
+  end
+
 
   it "renders the edit book form" do
     render
