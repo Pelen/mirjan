@@ -10,6 +10,11 @@ describe "books/edit" do
     ))
   end
 
+  it "display back link" do
+    render
+    rendered.should have_link('Back', href: books_path)
+  end
+
   it "renders the edit book form" do
     render
 

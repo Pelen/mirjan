@@ -40,7 +40,7 @@ gem 'carrierwave'
 gem 'turbolinks'
 
 #gem 'dropbox-sdk'
-
+gem 'capybara'
 gem 'thin'
 gem 'cloudinary'
 #gem 'fog'
