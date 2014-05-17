@@ -1,4 +1,9 @@
 <%- model_class = Book -%>
+
+<div class="jumbotron">
+  <% if user_signed_in? %>
+    <p class="lead">
+
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
@@ -9,7 +14,7 @@
 
 <table class="table table-striped">
 
-
+ 
 
   <thead>
     <tr>
@@ -24,14 +29,8 @@
       
     </tr>
   </thead>
-
   <tbody class="books">
-
-
 <%= render  @books %>
-
-
-
    </tbody>
 </table>
 <noscript>
@@ -39,3 +38,23 @@
   <%= will_paginate @books %>
 </div>
 </noscript>
+
+</p>
+    
+  <% else %>
+    <h1>Welcome, new user!</h1>
+    <p class="lead">
+      You must sign in or sign up before you can access our super sweet,
+      top secret content.
+    </p>
+    <div class="row-fluid">
+      <div class="span6">
+        <%= link_to "Sign In", new_user_session_path, :class => "btn btn-success" %>
+      </div>
+      <br>
+      <div class="span6">
+        <%= link_to "Sign Up", new_user_registration_path, :class => "btn btn-success" %>
+      </div>
+    </div>
+  <% end %>
+</div>
