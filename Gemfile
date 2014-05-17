@@ -25,11 +25,12 @@ group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
   gem 'shelly-dependencies'
+  gem 'rake', '~> 10.3.2'
 end
 
 gem 'bootstrap_form'
 gem 'will_paginate', '~> 3.0.5'
-gem 'rake', '~> 10.3.2'
+
 gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '3.1.1.0'
