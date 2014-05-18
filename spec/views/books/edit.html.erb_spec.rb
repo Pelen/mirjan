@@ -10,6 +10,21 @@ describe "books/edit" do
     ))
   end
 
+  it "displays form for new book" do
+  @book = Book.new
+  render
+  expect(rendered).to have_selector("form")
+  end
+
+  it "infers the controller path" do
+    expect(controller.request.path_parameters[:controller]).to eq("books")
+    expect(controller.controller_path).to eq("books")
+  end
+
+  it "infers the controller path" do
+    expect(controller.request.path_parameters[:action]).to eq("edit")
+  end
+
 
     it "display confirm button" do
     render
