@@ -21,7 +21,6 @@ git clone https://github.com/Pelen/mirjan
 bundle install
 
 rails s
-
 ```
 
 Aby uruchomić testy wykonujemy:
