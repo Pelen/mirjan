@@ -26,7 +26,7 @@ rails s
 Aby uruchomić testy wykonujemy:
 
 ```sh
-rspec
+bundle exec rspec
 ```
 
 ## WYKONANO
