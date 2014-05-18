@@ -7,7 +7,7 @@
 * Mirosław Podgórski
 * Jan Pieniążczak
 
-Rozszerzenie aplikacji My_Books[https://github.com/rails4/my_books] o kilka dodatków łącznie z wdrożeniem jej na ShellyCloud.
+Rozszerzenie aplikacji [My_Books](https://github.com/rails4/my_books) o kilka dodatków łącznie z wdrożeniem jej na ShellyCloud.
 
 Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, które są umieszczane są na Cloudinary.
 
@@ -26,9 +26,9 @@ Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, 
 
 * wgrywanie obrazków na <b>cludinary</b>.
 
-* autentykacja, za pomogą gemu Devis
+* autentykacja, za pomogą gemu <b>Devis</b>
 
-* wdrożenie aplikacji na ShellyCloud
+* wdrożenie aplikacji na <b>ShellyCloud</b>
 
 
 ## EXTRA GEMS
