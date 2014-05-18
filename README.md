@@ -16,7 +16,7 @@ Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, 
 Wykonujemy:
 
 ```sh
-git clone https://github.com/Pelen/mirjan
+git clone git@github.com:Pelen/mirjan.git
 
 bundle install
 
