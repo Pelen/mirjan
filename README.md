@@ -11,6 +11,24 @@ Rozszerzenie aplikacji [My_Books](https://github.com/rails4/my_books) o kilka do
 
 Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, które są umieszczane są na Cloudinary.
 
+## URUCHOMIENIE PROJEKTU
+
+Wykonujemy:
+
+```sh
+git clone https://github.com/Pelen/mirjan
+
+bundle install
+
+rails s
+
+```
+
+Aby uruchomić testy wykonujemy:
+
+```sh
+rspec
+```
 
 ## WYKONANO
 
