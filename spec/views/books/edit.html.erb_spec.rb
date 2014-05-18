@@ -26,6 +26,40 @@ describe "books/edit" do
     expect(view).to render_template(:partial => "_form", :count => 2)
   end
 
+    it "displays author" do
+    render
+    rendered.should have_field("book_author")
+  end
+
+  it "displays title" do
+    render
+    rendered.should have_field("book_title")
+  end
+
+    it "displays price" do
+    render
+    rendered.should have_field("book_price")
+  end
+
+  it "displays isbn" do
+    render
+    rendered.should have_field("book_isbn")
+  end
+
+    it "displays cover" do
+    render
+    rendered.should have_field("book_cover")
+  end
+
+  it "displays remote_cover_url" do
+    render
+    rendered.should have_field("book_remote_cover_url")
+  end
+
+  it "displays remove_cover" do
+    render
+    rendered.should have_field("book_remove_cover")
+  end
 
   it "renders the edit book form" do
     render

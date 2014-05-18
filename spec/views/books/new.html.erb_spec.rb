@@ -10,6 +10,37 @@ describe "books/new" do
     ).as_new_record)
   end
 
+
+     it "displays author" do
+    render
+    rendered.should have_field("book_author")
+  end
+
+  it "displays title" do
+    render
+    rendered.should have_field("book_title")
+  end
+
+    it "displays price" do
+    render
+    rendered.should have_field("book_price")
+  end
+
+  it "displays isbn" do
+    render
+    rendered.should have_field("book_isbn")
+  end
+
+    it "displays cover" do
+    render
+    rendered.should have_field("book_cover")
+  end
+
+  it "displays remote_cover_url" do
+    render
+    rendered.should have_field("book_remote_cover_url")
+  end
+
   it "renders new book form" do
     render
 
