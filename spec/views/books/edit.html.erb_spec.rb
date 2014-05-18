@@ -13,12 +13,12 @@ describe "books/edit" do
 
     it "display confirm button" do
     render
-    rendered.should have_selector('input[type=submit]')
+    expect(rendered).to have_selector('input[type=submit]')
   end
 
     it "display back link" do
     render
-    rendered.should have_link('Back', href: books_path)
+    expect(rendered).to have_link('Back', href: books_path)
   end
 
     it "renders _form partial" do

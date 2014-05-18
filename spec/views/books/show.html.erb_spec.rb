@@ -26,10 +26,10 @@ describe "books/show" do
   it "renders attributes in <p>" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Author/)
-    rendered.should match(/Title/)
-    rendered.should match(/Isbn/)
-    rendered.should match(/1/)
+    expect(rendered).to match(/Author/)
+    expect(rendered).to match(/Title/)
+    expect(rendered).to match(/Isbn/)
+    expect(rendered).to match(/1/)
   end
 
   it "displays price" do

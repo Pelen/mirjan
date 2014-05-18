@@ -26,7 +26,7 @@ Aplikacja umożliwia umieszczanie książek na stronie, łącznie z okładkami, 
 
 * wgrywanie obrazków na <b>cludinary</b>.
 
-* autentykacja, za pomogą gemu <b>Devis</b>
+* autentykacja, za pomogą gemu <b>Devise</b>
 
 * wdrożenie aplikacji na <b>ShellyCloud</b>
 

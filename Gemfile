@@ -18,6 +18,9 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 
+gem "database_cleaner", :group => :test
+gem "email_spec", :group => :test
+
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
